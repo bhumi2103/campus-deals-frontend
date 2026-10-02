@@ -1,0 +1,499 @@
+.profile-page {
+  min-height: 70vh;
+  background: #f5f0eb;
+  padding: 48px 20px 80px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.profile-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 32px;
+}
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-header h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.card-header p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0 0 24px;
+}
+
+.photo-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.avatar-lg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fdba74, #f97316);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+  border: 3px solid #fff;
+  position: relative;
+}
+
+.avatar-lg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.change-photo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 50px;
+  background: #fff;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.change-photo-btn:hover {
+  border-color: #f97316;
+  color: #f97316;
+  background: #fff8f3;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.15);
+}
+
+.change-photo-btn:active {
+  transform: scale(0.98);
+}
+
+.photo-hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.field-group {
+  margin-bottom: 24px;
+}
+
+.field-group:last-child {
+  margin-bottom: 0;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.label-icon {
+  color: #f97316;
+  font-size: 15px;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 13px 18px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #111827;
+  background: #fff;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-input::placeholder {
+  color: #d1d5db;
+}
+
+.profile-input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.profile-input.readonly {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+.profile-input.readonly:focus {
+  border-color: #e5e7eb;
+  box-shadow: none;
+}
+
+.field-hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+
+.profile-error {
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 13px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin-bottom: 16px;
+  animation: slideIn 0.2s ease-out;
+}
+
+.profile-success {
+  background: #f0fdf4;
+  color: #16a34a;
+  font-size: 13px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+  margin-bottom: 16px;
+  animation: slideIn 0.2s ease-out;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.logout-btn:hover {
+  opacity: 0.75;
+}
+
+.logout-btn:active {
+  opacity: 0.6;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f97316;
+  color: #fff;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.save-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btn-spinner-dark {
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Tablet Responsive (768px and below) ── */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 40px 16px 70px;
+  }
+
+  .profile-container {
+    padding: 0;
+  }
+
+  .profile-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .profile-card {
+    padding: 22px 20px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  .card-header p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .photo-row {
+    gap: 16px;
+  }
+
+  .avatar-lg {
+    width: 90px;
+    height: 90px;
+    font-size: 36px;
+    border-width: 2px;
+  }
+
+  .photo-controls {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .change-photo-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .profile-input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .profile-actions {
+    gap: 12px;
+  }
+
+  .save-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    min-width: 130px;
+  }
+
+  .logout-btn {
+    font-size: 14px;
+  }
+}
+
+/* ── Mobile Responsive (480px and below) ── */
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 32px 12px 60px;
+    min-height: 60vh;
+  }
+
+  .profile-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .profile-card {
+    padding: 18px 16px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+  }
+
+  .card-header h3 {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+
+  .card-header p {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .photo-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .avatar-lg {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .photo-controls {
+    width: 100%;
+    align-items: center;
+  }
+
+  .change-photo-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 13px;
+  }
+
+  .photo-hint {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .field-group {
+    margin-bottom: 20px;
+  }
+
+  .field-label {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .label-icon {
+    font-size: 14px;
+  }
+
+  .profile-input {
+    padding: 11px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .profile-input:focus {
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+  }
+
+  .field-hint {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .profile-error,
+  .profile-success {
+    font-size: 12px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+
+  .profile-actions {
+    flex-direction: column-reverse;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 4px;
+  }
+
+  .save-btn {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    min-width: unset;
+  }
+}
+
+/* ── Extra Small Mobile (under 360px) ── */
+@media (max-width: 360px) {
+  .profile-title {
+    font-size: 22px;
+  }
+
+  .avatar-lg {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .profile-card {
+    padding: 16px 14px;
+  }
+
+  .change-photo-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .save-btn,
+  .profile-input {
+    font-size: 13px;
+  }
+}
