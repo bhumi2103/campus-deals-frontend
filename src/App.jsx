@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./home";
-import ProfilePage from "./ProfilePage";
+import ProfilePage from "./profilePage";
 import BuyPage from "./BuyPage";
 import SellPage from "./SellPage";
 import Borrow from "./borrow";
