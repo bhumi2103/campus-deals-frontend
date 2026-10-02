@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import "./Borrow.css";
+import "./borrow.css";
 import { MdOutlineShoppingBag, MdSearch, MdSwapHoriz, MdHandshake, MdInfoOutline, MdDelete } from "react-icons/md";
 import { FaPlus, FaCamera } from "react-icons/fa";
 

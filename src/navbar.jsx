@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Navbar.css";
+import "./navbar.css";
 import "./authmodal.css";
 import {
   FaHome, FaTag, FaExchangeAlt, FaUser,

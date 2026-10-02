@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import "./ProfilePage.css";
+import "./profilePage.css";
 import { FaUser, FaSignOutAlt, FaSave, FaCamera, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import axios from "axios";
